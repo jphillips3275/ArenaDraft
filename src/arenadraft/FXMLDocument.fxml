@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arenadraft.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="608.0">
+         <image>
+            <Image url="@../OtherArtOrSounds/board.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="4.0" prefHeight="408.0" prefWidth="608.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Your Hero" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="leftImage" fitHeight="200.0" fitWidth="258.0" onMouseClicked="#onClickImage1" onMouseEntered="#hoversound" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ImageView fx:id="middleImage" fitHeight="200.0" fitWidth="258.0" onMouseClicked="#onClickImage2" onMouseEntered="#hoversound" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ImageView fx:id="rightImage" fitHeight="200.0" fitWidth="238.0" onMouseClicked="#onClickImage3" onMouseEntered="#hoversound" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Accordion GridPane.columnIndex="2">
+               <panes>
+                <TitledPane animated="false" expanded="false" text="Toggle Expantions">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="264.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutX="-14.0" layoutY="-45.0" prefHeight="200.0" prefWidth="200.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="188.0">
+                                       <children>
+                                          <CheckBox layoutX="22.0" layoutY="53.0" mnemonicParsing="false" onAction="#toggleClassic" text="Classic" />
+                                          <CheckBox layoutX="23.0" layoutY="88.0" mnemonicParsing="false" onAction="#toggleNax" text="Naxxramas" />
+                                          <CheckBox layoutX="23.0" layoutY="105.0" mnemonicParsing="false" onAction="#toggleGoblins" selected="true" text="Goblins vs Gnomes" />
+                                          <CheckBox layoutX="23.0" layoutY="122.0" mnemonicParsing="false" onAction="#toggleBlackrock" text="Blackrock Mountain" />
+                                          <CheckBox layoutX="23.0" layoutY="139.0" mnemonicParsing="false" onAction="#toggleTournament" text="The Grand Tournament" />
+                                          <CheckBox layoutX="23.0" layoutY="156.0" mnemonicParsing="false" onAction="#toggleExplorers" text="League of Explorers" />
+                                          <CheckBox layoutX="24.0" layoutY="173.0" mnemonicParsing="false" onAction="#toggleOldGods" text="Whispers of the Old Gods" />
+                                          <CheckBox layoutX="23.0" layoutY="190.0" mnemonicParsing="false" onAction="#toggleKarazhan" text="One Night in Karazhan" />
+                                          <CheckBox layoutX="23.0" layoutY="208.0" mnemonicParsing="false" onAction="#toggleGadgetzan" text="Mean Streets of Gadgetzan" />
+                                          <CheckBox layoutX="23.0" layoutY="225.0" mnemonicParsing="false" onAction="#toggleUngoro" text="Journey to Un'Goro" />
+                                          <CheckBox layoutX="22.0" layoutY="242.0" mnemonicParsing="false" onAction="#toggleFrozenThrone" text="Knights of the Frozen Throne" />
+                                          <CheckBox layoutX="22.0" layoutY="259.0" mnemonicParsing="false" onAction="#toggleKobolds" selected="true" text="Kobolds and Catacombs" />
+                                          <CheckBox layoutX="22.0" layoutY="276.0" mnemonicParsing="false" onAction="#toggleWitchwood" text="The Witchwood" />
+                                          <CheckBox layoutX="22.0" layoutY="293.0" mnemonicParsing="false" onAction="#toggleBoomsday" text="Boomsday Project" />
+                                          <CheckBox layoutX="22.0" layoutY="310.0" mnemonicParsing="false" onAction="#toggleRumble" text="Rastakahns Rumble" />
+                                          <CheckBox layoutX="26.0" layoutY="327.0" mnemonicParsing="false" onAction="#toggleShadows" text="Rise of Shadows" />
+                                          <CheckBox layoutX="26.0" layoutY="344.0" mnemonicParsing="false" onAction="#toggleUldum" text="Saviors of Uldum" />
+                                          <CheckBox layoutX="26.0" layoutY="361.0" mnemonicParsing="false" onAction="#toggleDragons" text="Descent of Dragons" />
+                                          <CheckBox layoutX="26.0" layoutY="378.0" mnemonicParsing="false" onAction="#toggleOutland" selected="true" text="Ashes of Outland" />
+                                          <CheckBox layoutX="26.0" layoutY="395.0" mnemonicParsing="false" onAction="#toggleScholomance" selected="true" text="Scholomance Academy" />
+                                          <CheckBox fx:id="darkmoon" layoutX="25.0" layoutY="412.0" mnemonicParsing="false" onAction="#toggleDarkmoon" selected="true" text="The Darkmoon Faire" />
+                                          <CheckBox layoutX="22.0" layoutY="70.0" mnemonicParsing="false" onAction="#toggleCore" selected="true" text="Core" />
+                                          <CheckBox fx:id="darkmoon1" layoutX="26.0" layoutY="429.0" mnemonicParsing="false" onAction="#toggleBarrens" selected="true" text="Forged in the Barrens" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+               </panes>
+            </Accordion>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

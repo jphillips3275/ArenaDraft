@@ -1,0 +1,6 @@
+Add new expantion to trimPath method
+Change ExpantionRandMax and DHExpantionRandMax to +1 (probably)
+Add a toggle method for the new expantion
+Add checkboxes to FXMLDoc through scenebuilder and tie them to the methods
+Add a new bool to the bans array
+If the arena rotation is changed, change the bool array to reflect that
